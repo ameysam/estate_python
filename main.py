@@ -48,14 +48,14 @@ if __name__ == "__main__":
     apartment_sell.show_detail()
 
 
-    house_sell = HouseSell(
-        has_yard=True, floor_count=1, user=User.object_list[2], area=400,
-        rooms_count=6, built_year=1370, region=reg1, address="Some text...", 
-        convertable=True, discountable=True, price_per_meter=20
-    )
-    house_sell.show_detail()
+    # house_sell = HouseSell(
+    #     has_yard=True, floor_count=1, user=User.object_list[2], area=400,
+    #     rooms_count=6, built_year=1370, region=reg1, address="Some text...", 
+    #     convertable=True, discountable=True, price_per_meter=20
+    # )
+    # house_sell.show_detail()
 
-    search_result = ApartmentSell.manager.search(region=reg2)
+    search_result = ApartmentSell.manager.search(region=reg1, price_per_meter__min=6, price_per_meter__max=11)
 
     print(search_result)
 
