@@ -38,3 +38,7 @@ class Manager:
 
 
         return results
+
+
+    def count(self):
+        return len(self._class.object_list)

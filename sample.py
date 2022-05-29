@@ -13,8 +13,8 @@ def create_samples():
     for mobile in MOBILES:
         User(choice(FIRST_NAMES), choice(LAST_NAMES), mobile)
 
-    for user in User.object_list:
-        print(f"{user.id}\t {user.fullname}")
+    # for user in User.object_list:
+    #     print(f"{user.id}\t {user.fullname}")
 
     reg1 = Region(name="R1")
     reg2 = Region(name="R2")
@@ -58,7 +58,9 @@ def create_samples():
 
     search_result = ApartmentSell.manager.search(region=reg1, price_per_meter__min=6, price_per_meter__max=11)
 
-    print(search_result)
+    # print(search_result)
 
     # print(ApartmentSell.manager)
     # print(HouseSell.manager)
+
+    print('Samples created')
